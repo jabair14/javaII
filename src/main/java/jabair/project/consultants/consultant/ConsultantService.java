@@ -22,4 +22,14 @@ public class ConsultantService {
     public void addNewConsultant(Consultant consultant) {
         consultantRepository.save(consultant);
     }
+
+    public void deleteConsultant(Long consultantId) {
+        boolean exists = consultantRepository.existsById(consultantId);
+        if (!exists) {
+            throw new IllegalStateException(
+                    "Consultant with id" + "consultantId" + "does not exist!"
+            );
+        }
+        consultantRepository.deleteById(consultantId);
+    }
 }

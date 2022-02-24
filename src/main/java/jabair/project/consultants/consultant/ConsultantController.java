@@ -25,4 +25,9 @@ public class ConsultantController {
     public void registerNewConsultant(@RequestBody Consultant consultant) {
         consultantService.addNewConsultant(consultant);
     }
+
+    @DeleteMapping(path = "{consultantId}")
+    public void deleteConsultant(@PathVariable("consultantId") Long consultantId) {
+        consultantService.deleteConsultant(consultantId);
+    }
 }
