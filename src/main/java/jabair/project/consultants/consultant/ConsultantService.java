@@ -18,4 +18,8 @@ public class ConsultantService {
     public List<Consultant> getConsultants(){
         return consultantRepository.findAll();
     }
+
+    public void addNewConsultant(Consultant consultant) {
+        System.out.println(consultant);
+    }
 }
