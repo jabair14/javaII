@@ -20,6 +20,6 @@ public class ConsultantService {
     }
 
     public void addNewConsultant(Consultant consultant) {
-        System.out.println(consultant);
+        consultantRepository.save(consultant);
     }
 }
