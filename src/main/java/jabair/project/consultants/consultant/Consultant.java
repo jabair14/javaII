@@ -1,6 +1,6 @@
 package jabair.project.consultants.consultant;
 
-import javax.annotation.processing.Generated;
+
 import javax.persistence.*;
 
 @Entity
