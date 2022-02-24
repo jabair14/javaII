@@ -7,15 +7,7 @@ import javax.persistence.*;
 @Table
 public class Consultant {
     @Id
-    @SequenceGenerator(
-            name = "consultant_sequence",
-            sequenceName = "consultant_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "consultant_sequence"
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String email;
